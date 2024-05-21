@@ -8,13 +8,9 @@
 # twine==5.0.0
 # ruff==0.3.5
 
-pytest
-fastapi 
-uvicorn
-streamlit
-torch
-torchvision
-scikit-learn
-tqdm
-wordcloud
-matplotlib
+pytest==8.2.1
+fastapi==0.111.0 
+uvicorn==0.29.0
+torch==2.3.0
+torchvision==0.18.0
+tqdm==4.66.4

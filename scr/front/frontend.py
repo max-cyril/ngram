@@ -23,7 +23,7 @@ if st.button("Train Model"):
     data = {"corpus": corpus}
     
     with st.spinner('Training in progress...'):
-        response = requests.post("http://localhost:8000/train/", json=data)
+        response = requests.post("http://ngram_api:8000/train/", json=data)
         result = response.json()
         st.write(result["message"])
         
@@ -61,7 +61,7 @@ if context:
     if len(context_words) >= 2:
         context_to_predict = ' '.join(context_words[-2:])
         # Appeler l'API pour obtenir les prédictions
-        response = requests.post("http://localhost:8000/predict/", json={"context": context_to_predict})
+        response = requests.post("http://ngram_api:8000/predict/", json={"context": context_to_predict})
         predictions = response.json()["predictions"]
         st.write("Predictions:", predictions)
     else:
