@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "n_gram_model_predict"
+version = "1.0"
+description = "the aim is to build N-gram model from scratch, and predict it via streamlite UI serve by FastApi"
+readme = "README.rst"
+authors = [
+  {name = "max cyril", email = "audreyr@example.com"}
+]
+maintainers = [
+  {name = "max cyril", email = "audreyr@example.com"}
+]
+classifiers = [
+
+]
+license = {text = "MIT license"}
+dependencies = [
+  "typer"
+]
+
+[project.optional-dependencies]
+dev = [
+    "coverage",  # testing
+    "mypy",  # linting
+    "pytest",  # testing
+    "ruff"  # linting
+]
+
+[project.urls]
+
+bugs = "https://github.com/audreyr/n_gram_model_predict/issues"
+changelog = "https://github.com/audreyr/n_gram_model_predict/blob/master/changelog.md"
+homepage = "https://github.com/audreyr/n_gram_model_predict"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.package-data]
+"*" = ["*.*"]
+
+
+
+
+# Mypy
+# ----
+
+[tool.mypy]
+files = "."
+
+# Use strict defaults
+strict = true
+warn_unreachable = true
+warn_no_return = true
+
+[[tool.mypy.overrides]]
+# Don't require test functions to include types
+module = "tests.*"
+allow_untyped_defs = true
+disable_error_code = "attr-defined"
+
