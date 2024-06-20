@@ -5,7 +5,6 @@ N-gram model predict
 
 # ngram
 Predict next word based on two words context
-A- use Interface to communicate with ngram api & predict the next word
 
 1- clone repository `ngram`
 2- open terminal and enter into directory  ngram/ 
@@ -13,8 +12,8 @@ A- use Interface to communicate with ngram api & predict the next word
         ```bash
         docker-compose up
         ```
-4-to communicate with the API via streamlit Interface got to `localhost:8501` on your navigator
- - to uste directly ngram API, got to `localhost:8000`
+4- to communicate with the API via streamlit Interface go to `localhost:8501` on your navigator
+4'- to  directly use ngram API, go to `localhost:8000`
 
 PS: if you got this following error at step 3 :
         ```
