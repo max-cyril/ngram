@@ -5,6 +5,31 @@ from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 import json
 
+sdb_bg_img = """
+    <style>
+    [data-testid="stSidebarContent"]
+    {
+    background-color: #fcfafc;
+    opacity: 1;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #fcfafc 4px ), repeating-linear-gradient( #dad1c955, #dad1c9 );</style>
+    """
+st.markdown(sdb_bg_img, unsafe_allow_html=True)
+
+page_bg_img = """
+<style>
+[data-testid="stAppViewContainer"]
+{
+background-color: #fcfafc;
+opacity: 1;
+background-image:  radial-gradient(#227b75 0.4px, transparent 0.4px), radial-gradient(#227b75 0.4px, #fcfafc 0.4px);
+background-size: 16px 16px;
+background-position: 0 0,8px 8px;
+</style>
+"""
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
+
+
 # Interface utilisateur Streamlit
 st.title("Next Word Prediction")
 
