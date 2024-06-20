@@ -6,7 +6,7 @@ services:
       context: ./scr/back/
       dockerfile: back.dockerfile
     ports:
-      - "8001:8000"
+      - "8000:8000"
     
 
   streamlit_ngram_app:
