@@ -16,7 +16,9 @@ Predict next word based on two words context
         ```
 4- to communicate with the API via streamlit Interface go to `localhost:8501` on your navigator
 
+
 4'- to  directly use ngram API, go to `localhost:8000`
+
 
 PS: if you got this following error at step 3 :
         ```
