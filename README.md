@@ -14,6 +14,7 @@ Predict next word based on two words context
         ```bash
         docker-compose up
         ```
+
 4- to communicate with the API via streamlit Interface go to `localhost:8501` on your navigator
 
 
