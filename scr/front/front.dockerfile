@@ -18,5 +18,6 @@ RUN python -m spacy download fr_core_news_sm
 RUN python -m spacy download xx_sent_ud_sm
 
 
+
 # Commande pour démarrer l'application Streamlit
 CMD ["streamlit", "run", "frontend.py"]

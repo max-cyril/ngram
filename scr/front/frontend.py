@@ -4,6 +4,7 @@ import time
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 import json
+
 from langdetect import detect,detect_langs
 import spacy
 
@@ -23,6 +24,7 @@ sdb_bg_img = """
     """
 st.markdown(sdb_bg_img, unsafe_allow_html=True)
 
+
 # page_bg_img = """
 # <style>
 # [data-testid="stAppViewContainer"]
@@ -40,11 +42,11 @@ st.markdown(sdb_bg_img, unsafe_allow_html=True)
 
 
 
+
 # Interface utilisateur Streamlit
 st.title("Next Word Prediction")
 
 
-    
 # Entrée du corpus pour l'entraînement
 corpus_input = st.text_area("Enter corpus for training (each sentence on a new line):",help="About 10 minutes for 500 words to train")
 
@@ -52,6 +54,7 @@ if corpus_input:
     text_count = ' '.join(corpus_input.split())
     st.write("you enter :",len(text_count.split()),"\n", "words")
     st.write("N-GRAM  Neural Network model training will  last About" , round(len(text_count.split())*(1/50)), " ", "minutes")
+
     
     # Détection de la langue du corpus
     language_deducted = detect_langs(text_count)
@@ -89,7 +92,6 @@ if corpus_input:
             st.dataframe(df_entities, height=150)
 
 
-        
 # Bouton pour démarrer l'entraînement
 if st.button("Train Model"):
     corpus = corpus_input.split('\n')
