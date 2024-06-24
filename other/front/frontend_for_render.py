@@ -54,9 +54,7 @@ if st.button("Train Model"):
     data = {"corpus": corpus}
 
     with st.spinner("Training in progress..."):
-        response = requests.post(
-            "https://cyril-ngram.onrender.com/train/", json=data
-        )  # https://cyril-ngram.onrender.com
+        response = requests.post("https://cyril-ngram.onrender.com/train/", json=data)  
         result = response.json()
         st.write(result["message"])
 
